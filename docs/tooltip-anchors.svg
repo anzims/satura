@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="900" viewBox="0 0 1240 900">
+  <rect width="1240" height="900" fill="#fafafa" />
+  <text x="40" y="46" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#18181b">Подсказка встаёт углом к углу</text>
+  <text x="40" y="74" font-family="Segoe UI, Arial" font-size="15" fill="#52525b">Красная точка — общая: угол плашки по диагонали совпадает с углом объекта; пунктир — ось привязки.</text>
+  <g>
+    <rect x="40" y="90" width="560" height="360" rx="16" fill="#ffffff" stroke="#e4e4e7" />
+    <text x="64" y="124" font-family="Segoe UI, Arial" font-size="17" font-weight="600" fill="#18181b">placement="top-left"</text>
+    <text x="64" y="148" font-family="Segoe UI, Arial" font-size="12.5" fill="#71717a">нижний правый угол плашки → левый верхний угол объекта</text>
+    <path d="M95 222 h154 a8 8 0 0 1 8 8 v24 a8 8 0 0 1 -8 8 h-154 a8 8 0 0 1 -8 -8 v-24 a8 8 0 0 1 8 -8 z" fill="#18181b" />
+    <text x="139" y="246" font-family="Segoe UI, Arial" font-size="13" fill="#ffffff">тултип</text>
+    <path d="M265 262 h150 a10 10 0 0 1 10 10 v36 a10 10 0 0 1 -10 10 h-150 a10 10 0 0 1 -10 -10 v-36 a10 10 0 0 1 10 -10 z" fill="#f4f4f5" stroke="#a1a1aa" />
+    <text x="312" y="296" font-family="Segoe UI, Arial" font-size="14" fill="#3f3f46">объект</text>
+    <line x1="172" y1="242" x2="340" y2="290" stroke="#ef4444" stroke-width="2" stroke-dasharray="7 5" />
+    <circle cx="265" cy="262" r="7" fill="#ffffff" stroke="#ef4444" stroke-width="2.5" />
+  </g>
+  <g>
+    <rect x="640" y="90" width="560" height="360" rx="16" fill="#ffffff" stroke="#e4e4e7" />
+    <text x="664" y="124" font-family="Segoe UI, Arial" font-size="17" font-weight="600" fill="#18181b">placement="top-right"</text>
+    <text x="664" y="148" font-family="Segoe UI, Arial" font-size="12.5" fill="#71717a">нижний левый угол плашки → правый верхний угол объекта</text>
+    <path d="M1015 222 h154 a8 8 0 0 1 8 8 v24 a8 8 0 0 1 -8 8 h-154 a8 8 0 0 1 -8 -8 v-24 a8 8 0 0 1 8 -8 z" fill="#18181b" />
+    <text x="1059" y="246" font-family="Segoe UI, Arial" font-size="13" fill="#ffffff">тултип</text>
+    <path d="M865 262 h150 a10 10 0 0 1 10 10 v36 a10 10 0 0 1 -10 10 h-150 a10 10 0 0 1 -10 -10 v-36 a10 10 0 0 1 10 -10 z" fill="#f4f4f5" stroke="#a1a1aa" />
+    <text x="912" y="296" font-family="Segoe UI, Arial" font-size="14" fill="#3f3f46">объект</text>
+    <line x1="1092" y1="242" x2="940" y2="290" stroke="#ef4444" stroke-width="2" stroke-dasharray="7 5" />
+    <circle cx="1015" cy="262" r="7" fill="#ffffff" stroke="#ef4444" stroke-width="2.5" />
+  </g>
+  <g>
+    <rect x="40" y="490" width="560" height="360" rx="16" fill="#ffffff" stroke="#e4e4e7" />
+    <text x="64" y="524" font-family="Segoe UI, Arial" font-size="17" font-weight="600" fill="#18181b">placement="bottom-left"</text>
+    <text x="64" y="548" font-family="Segoe UI, Arial" font-size="12.5" fill="#71717a">верхний правый угол плашки → левый нижний угол объекта</text>
+    <path d="M95 718 h154 a8 8 0 0 1 8 8 v24 a8 8 0 0 1 -8 8 h-154 a8 8 0 0 1 -8 -8 v-24 a8 8 0 0 1 8 -8 z" fill="#18181b" />
+    <text x="139" y="742" font-family="Segoe UI, Arial" font-size="13" fill="#ffffff">тултип</text>
+    <path d="M265 662 h150 a10 10 0 0 1 10 10 v36 a10 10 0 0 1 -10 10 h-150 a10 10 0 0 1 -10 -10 v-36 a10 10 0 0 1 10 -10 z" fill="#f4f4f5" stroke="#a1a1aa" />
+    <text x="312" y="696" font-family="Segoe UI, Arial" font-size="14" fill="#3f3f46">объект</text>
+    <line x1="172" y1="738" x2="340" y2="690" stroke="#ef4444" stroke-width="2" stroke-dasharray="7 5" />
+    <circle cx="265" cy="718" r="7" fill="#ffffff" stroke="#ef4444" stroke-width="2.5" />
+  </g>
+  <g>
+    <rect x="640" y="490" width="560" height="360" rx="16" fill="#ffffff" stroke="#e4e4e7" />
+    <text x="664" y="524" font-family="Segoe UI, Arial" font-size="17" font-weight="600" fill="#18181b">placement="bottom-right"</text>
+    <text x="664" y="548" font-family="Segoe UI, Arial" font-size="12.5" fill="#71717a">верхний левый угол плашки → правый нижний угол объекта</text>
+    <path d="M1015 718 h154 a8 8 0 0 1 8 8 v24 a8 8 0 0 1 -8 8 h-154 a8 8 0 0 1 -8 -8 v-24 a8 8 0 0 1 8 -8 z" fill="#18181b" />
+    <text x="1059" y="742" font-family="Segoe UI, Arial" font-size="13" fill="#ffffff">тултип</text>
+    <path d="M865 662 h150 a10 10 0 0 1 10 10 v36 a10 10 0 0 1 -10 10 h-150 a10 10 0 0 1 -10 -10 v-36 a10 10 0 0 1 10 -10 z" fill="#f4f4f5" stroke="#a1a1aa" />
+    <text x="912" y="696" font-family="Segoe UI, Arial" font-size="14" fill="#3f3f46">объект</text>
+    <line x1="1092" y1="738" x2="940" y2="690" stroke="#ef4444" stroke-width="2" stroke-dasharray="7 5" />
+    <circle cx="1015" cy="718" r="7" fill="#ffffff" stroke="#ef4444" stroke-width="2.5" />
+  </g>
+  <text x="40" y="878" font-family="Segoe UI, Arial" font-size="13" fill="#71717a">Серая плашка — объект (кнопка), тёмная — подсказка. SVG открывается в Figma как вектор.</text>
+</svg>

@@ -1,0 +1,216 @@
+/*
+ * Satura — токены дизайн-системы.
+ *
+ * Подключение в приложении (resources/css/app.css):
+ *
+ *   @import '../../packages/anzims/satura/resources/css/satura.css';
+ *   @source  '../../packages/anzims/satura/resources/views';
+ *   @source  '../../packages/anzims/satura/src';
+ *
+ * Строки @source обязательны: Tailwind собирает утилиты у потребителя,
+ * и без них классы из Blade-шаблонов пакета в CSS не попадут.
+ * При установке из vendor пути начинаются с vendor/anzims/satura.
+ *
+ * Палитры base и accent ниже — значения по умолчанию (zinc, blue).
+ * Другие палитры генерирует `php artisan satura:theme --base=... --accent=...`.
+ * Сгенерированный файл подключается ПОСЛЕ этого файла.
+ */
+
+:root {
+    /* base — палитра нейтральных цветов */
+    --ui-base-50: oklch(98.5% 0 none);
+    --ui-base-100: oklch(96.7% 0.001 286.375);
+    --ui-base-200: oklch(92% 0.004 286.32);
+    --ui-base-300: oklch(87.1% 0.006 286.286);
+    --ui-base-400: oklch(70.5% 0.015 286.067);
+    --ui-base-500: oklch(55.2% 0.016 285.938);
+    --ui-base-600: oklch(44.2% 0.017 285.786);
+    --ui-base-700: oklch(37% 0.013 285.805);
+    --ui-base-800: oklch(27.4% 0.006 286.033);
+    --ui-base-900: oklch(21% 0.006 285.885);
+    --ui-base-950: oklch(14.1% 0.005 285.823);
+
+    /* accent — акцентный цвет */
+    --ui-accent-50: oklch(97% 0.014 254.604);
+    --ui-accent-100: oklch(93.2% 0.032 255.585);
+    --ui-accent-200: oklch(88.2% 0.059 254.128);
+    --ui-accent-300: oklch(80.9% 0.105 251.813);
+    --ui-accent-400: oklch(70.7% 0.165 254.624);
+    --ui-accent-500: oklch(62.3% 0.214 259.815);
+    --ui-accent-600: oklch(54.6% 0.245 262.881);
+    --ui-accent-700: oklch(48.8% 0.243 264.376);
+    --ui-accent-800: oklch(42.4% 0.199 265.638);
+    --ui-accent-900: oklch(37.9% 0.146 265.522);
+    --ui-accent-950: oklch(28.2% 0.091 267.935);
+}
+
+:root {
+    /* смысловые токены, светлая тема */
+    --ui-bg: var(--ui-base-50);
+    --ui-surface: oklch(100% 0 0);
+    --ui-fg: var(--ui-base-950);
+    --ui-muted: var(--ui-base-500);
+    --ui-border: var(--ui-base-200);
+    --ui-border-strong: var(--ui-base-300);
+    --ui-raised: oklch(100% 0 0);
+    --ui-inset: var(--ui-base-100);
+    --ui-skeleton: var(--ui-base-200);
+    --ui-switch-off: var(--ui-base-300);
+    --ui-overlay: oklch(0% 0 0 / 0.45);
+    --ui-accent: var(--ui-accent-600);
+    --ui-accent-fg: oklch(100% 0 0);
+    --ui-danger: oklch(57.7% 0.245 27.325);
+    --ui-danger-fg: oklch(100% 0 0);
+}
+
+.dark {
+    /* тёмная тема: те же токены, другие значения */
+    --ui-bg: var(--ui-base-950);
+    --ui-surface: var(--ui-base-900);
+    --ui-fg: var(--ui-base-50);
+    --ui-muted: var(--ui-base-400);
+    --ui-border: var(--ui-base-800);
+    --ui-border-strong: var(--ui-base-700);
+    --ui-raised: var(--ui-base-800);
+    --ui-inset: var(--ui-base-950);
+    --ui-skeleton: var(--ui-base-800);
+    --ui-switch-off: var(--ui-base-700);
+    --ui-overlay: oklch(0% 0 0 / 0.65);
+    --ui-accent: var(--ui-accent-400);
+    --ui-accent-fg: var(--ui-base-950);
+    --ui-danger: oklch(70.4% 0.191 22.216);
+    --ui-danger-fg: var(--ui-base-950);
+}
+
+@theme {
+    --color-ui-bg: var(--ui-bg);
+    --color-ui-surface: var(--ui-surface);
+    --color-ui-fg: var(--ui-fg);
+    --color-ui-muted: var(--ui-muted);
+    --color-ui-border: var(--ui-border);
+    --color-ui-raised: var(--ui-raised);
+    --color-ui-inset: var(--ui-inset);
+    --color-ui-skeleton: var(--ui-skeleton);
+    --color-ui-switch-off: var(--ui-switch-off);
+    --color-ui-overlay: var(--ui-overlay);
+    --color-ui-border-strong: var(--ui-border-strong);
+    --color-ui-accent: var(--ui-accent);
+    --color-ui-accent-fg: var(--ui-accent-fg);
+    --color-ui-danger: var(--ui-danger);
+    --color-ui-danger-fg: var(--ui-danger-fg);
+
+    --radius-ui-sm: 0.375rem;
+    --radius-ui-md: 0.5rem;
+    --radius-ui-lg: 0.75rem;
+
+    /* шкалы base и accent: следуют за палитрой из satura:theme */
+    --color-base-50: var(--ui-base-50);
+    --color-base-100: var(--ui-base-100);
+    --color-base-200: var(--ui-base-200);
+    --color-base-300: var(--ui-base-300);
+    --color-base-400: var(--ui-base-400);
+    --color-base-500: var(--ui-base-500);
+    --color-base-600: var(--ui-base-600);
+    --color-base-700: var(--ui-base-700);
+    --color-base-800: var(--ui-base-800);
+    --color-base-900: var(--ui-base-900);
+    --color-base-950: var(--ui-base-950);
+
+    --color-accent-50: var(--ui-accent-50);
+    --color-accent-100: var(--ui-accent-100);
+    --color-accent-200: var(--ui-accent-200);
+    --color-accent-300: var(--ui-accent-300);
+    --color-accent-400: var(--ui-accent-400);
+    --color-accent-500: var(--ui-accent-500);
+    --color-accent-600: var(--ui-accent-600);
+    --color-accent-700: var(--ui-accent-700);
+    --color-accent-800: var(--ui-accent-800);
+    --color-accent-900: var(--ui-accent-900);
+    --color-accent-950: var(--ui-accent-950);
+
+    --text-ui-3xs: 0.625rem;
+    --text-ui-3xs--line-height: 0.875rem;
+    --text-ui-2xs: 0.6875rem;
+    --text-ui-2xs--line-height: 0.875rem;
+    --text-ui-xs: 0.75rem;
+    --text-ui-xs--line-height: 1rem;
+    --text-ui-sm: 0.875rem;
+    --text-ui-sm--line-height: 1.25rem;
+    --text-ui-base: 1rem;
+    --text-ui-base--line-height: 1.5rem;
+}
+
+/*
+ * Матрица цветных фонов: шесть оттенков на каждый цвет палитры.
+ * @source inline нужен потому, что Tailwind собирает только классы,
+ * которые видит в файлах, а bg-{цвет}-{оттенок} в шаблонах не встречается.
+ */
+@source inline("bg-{accent,red,orange,amber,yellow,lime,green,emerald,teal,cyan,sky,blue,indigo,violet,purple,fuchsia,pink,rose,slate,gray,zinc,neutral,stone,mauve,olive,mist,taupe}-{50,100,200,600,700,900}");
+@source inline("bg-base-{50,100,200,300,400,500,600,700,800,900,950}");
+@source inline("bg-accent-{50,100,200,300,400,500,600,700,800,900,950}");
+
+/* Alpine: скрыть до инициализации, иначе панели табов мигают. */
+[x-cloak] {
+    display: none !important;
+}
+
+/* Боковая панель: сдвиг из-за края при появлении и обратный при скрытии. */
+[data-sat-drawer] {
+    transition:
+        translate 200ms ease-out,
+        opacity 200ms ease-out,
+        display 200ms allow-discrete,
+        overlay 200ms allow-discrete;
+}
+
+[data-sat-drawer]:not([open]) {
+    translate: var(--sat-drawer-from, 100%) 0;
+    opacity: 0;
+}
+
+@starting-style {
+    [data-sat-drawer][open] {
+        translate: var(--sat-drawer-from, 100%) 0;
+        opacity: 0;
+    }
+}
+
+/* Модалки и панели: плавное затемнение подложки и мягкое закрытие. */
+[data-sat-modal] {
+    transition:
+        opacity 200ms ease-out,
+        display 200ms allow-discrete,
+        overlay 200ms allow-discrete;
+}
+
+[data-sat-drawer]::backdrop,
+[data-sat-modal]::backdrop {
+    background-color: rgb(9 9 11 / var(--sat-backdrop-alpha, 0.5));
+    opacity: 1;
+    transition:
+        opacity 200ms ease-out,
+        display 200ms allow-discrete,
+        overlay 200ms allow-discrete;
+}
+
+.dark [data-sat-drawer]::backdrop,
+.dark [data-sat-modal]::backdrop {
+    background-color: rgb(0 0 0 / var(--sat-backdrop-alpha, 0.75));
+}
+
+[data-sat-modal]:not([open]),
+[data-sat-drawer]:not([open])::backdrop,
+[data-sat-modal]:not([open])::backdrop {
+    opacity: 0;
+}
+
+@starting-style {
+    [data-sat-modal][open] {
+        opacity: 0;
+    }
+
+    [data-sat-drawer][open]::backdrop,
+    [data-sat-modal][open]::backdrop {
+        opacity: 0;
+    }
+}

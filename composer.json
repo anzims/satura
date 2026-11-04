@@ -1,0 +1,59 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "anzims/satura",
+    "description": "Satura — design system for Laravel 13 and Livewire 4: tokens, Blade components and Livewire widgets.",
+    "keywords": [
+        "laravel",
+        "livewire",
+        "design-system",
+        "ui",
+        "tailwind",
+        "blade"
+    ],
+    "license": "MIT",
+    "type": "library",
+    "version": "0.1.0",
+    "require": {
+        "illuminate/support": "^13.0",
+        "illuminate/view": "^13.0",
+        "livewire/livewire": "^4.0",
+        "php": "^8.3"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.27",
+        "orchestra/testbench": "^11.0",
+        "pestphp/pest": "^4.0",
+        "pestphp/pest-plugin-laravel": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Anzims\\Satura\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Anzims\\Satura\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Anzims\\Satura\\SaturaServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "pest",
+        "lint": "pint --test",
+        "lint:fix": "pint"
+    }
+}
